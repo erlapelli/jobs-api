@@ -3,6 +3,14 @@ require('express-async-errors');
 const express = require('express');
 const app = express();
 
+app.use(cors( 
+  {
+    origin:[jobs-api-tawny.vercel.app],
+    methods:["POST","GET","DELETE","PATCH"],
+    credentials:true 
+  }
+));
+
 // extra security packages 
 
 const helmet = require('helmet');
