@@ -5,7 +5,7 @@ const app = express();
 
 app.use(cors( 
   {
-    origin:[jobs-api],
+    origin:[jobs-api1],
     methods:["POST","GET","DELETE","PATCH"],
     credentials:true 
   }
