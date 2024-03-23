@@ -3,12 +3,12 @@ require('express-async-errors');
 const express = require('express');
 const app = express();
 
-app.use(cors( 
-  {
-    origin:[jobs-api],
-    methods:["POST","GET","DELETE","PATCH"],
-    credentials:true 
-  }
+app.use(cors(
+    {
+        origin: ["jobs-api"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
 ));
 
 // extra security packages 
