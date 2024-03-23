@@ -5,7 +5,7 @@ const app = express();
 
 app.use(cors( 
   {
-    origin:[jobs-api-tawny.vercel.app],
+    origin:[jobs-api-3evv],
     methods:["POST","GET","DELETE","PATCH"],
     credentials:true 
   }
