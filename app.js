@@ -1,16 +1,9 @@
 require('dotenv').config();
 require('express-async-errors');
-const cors = require('cors')
+
 const express = require('express');
 const app = express();
 
-app.use(cors(
-    {
-        origin: ["https://jobs-api.vercel.app"],
-        methods: ["POST", "GET","DELETE","PATCH"],
-        credentials: true
-    }
-));
 
 // extra security packages 
 
