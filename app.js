@@ -3,13 +3,7 @@ require('express-async-errors');
 const express = require('express');
 const app = express();
 
-app.use(cors( 
-  {
-    origin:[jobs-api-tawny.vercel.app],
-    methods:["POST","GET","DELETE","PATCH"],
-    credentials:true 
-  }
-));
+
 
 // extra security packages 
 
@@ -62,7 +56,7 @@ const port = process.env.PORT || 3000;
 
 const start = async () => {
   try {
-    await connectDB("mongodb+srv://poorna:poorna123@nodeexpressproject.r8m4k7t.mongodb.net/JOBS-API?retryWrites=true&w=majority&appName=nodeexpressproject")
+    await connectDB(process.env.MONGO_URI)
     app.listen(port, () =>
       console.log(`Server is listening on port ${port}...`)
     );
